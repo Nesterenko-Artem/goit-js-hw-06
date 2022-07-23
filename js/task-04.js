@@ -10,3 +10,23 @@
 // Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
 // Обновляй интерфейс новым значением переменной counterValue.
 // ==========================
+const ref = {
+  decrement: document.querySelector('button[data-action="decrement"]'),
+  increment: document.querySelector('button[data-action="increment"]'),
+  span: document.querySelector("#value"),
+};
+let counterValue = 0;
+
+const decClick = () => {
+  counterValue -= 1;
+  ref.span.textContent = counterValue;
+};
+
+const incClick = () => {
+  counterValue += 1;
+  ref.span.textContent = counterValue;
+};
+
+ref.decrement.addEventListener("click", decClick);
+ref.increment.addEventListener("click", incClick);
+
