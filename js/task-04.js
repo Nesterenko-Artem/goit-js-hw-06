@@ -29,4 +29,3 @@ const incClick = () => {
 
 ref.decrement.addEventListener("click", decClick);
 ref.increment.addEventListener("click", incClick);
-
