@@ -11,8 +11,8 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 // ==========================
 const ref = {
-  decrement: document.querySelector('button[data-action="decrement"]'),
-  increment: document.querySelector('button[data-action="increment"]'),
+  btnDecrement: document.querySelector('button[data-action="decrement"]'),
+  btnIncrement: document.querySelector('button[data-action="increment"]'),
   span: document.querySelector("#value"),
 };
 let counterValue = 0;
@@ -27,5 +27,5 @@ const incClick = () => {
   ref.span.textContent = counterValue;
 };
 
-ref.decrement.addEventListener("click", decClick);
-ref.increment.addEventListener("click", incClick);
+ref.btnDecrement.addEventListener("click", decClick);
+ref.btnIncrement.addEventListener("click", incClick);
