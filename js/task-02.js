@@ -20,10 +20,18 @@
 // После чего вставит все <li> за одну операцию в список ul#ingredients.
 // ========================
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
+const ul = document.querySelector("#ingredients");
+
+const elementsList = ingredients.map((option) => {
+  const el = document.createElement("li");
+  el.classList.add("item");
+  el.textContent = option;
+  return ul.append(el);
+});
