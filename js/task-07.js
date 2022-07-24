@@ -5,3 +5,10 @@
 // <br />
 // <span id="text">Abracadabra!</span>
 // =========================
+
+const inputEl = document.querySelector("#font-size-control");
+const spanEl = document.querySelector("#text");
+
+inputEl.addEventListener("input", function () {
+  spanEl.style.fontSize = inputEl.value + "px";
+});
