@@ -33,5 +33,6 @@ const elementsList = ingredients.map((option) => {
   const el = document.createElement("li");
   el.classList.add("item");
   el.textContent = option;
-  return ul.append(el);
+  return el;
 });
+ul.append(...elementsList);
