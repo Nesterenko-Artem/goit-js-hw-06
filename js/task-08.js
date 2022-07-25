@@ -29,11 +29,9 @@ const hendleSubmit = (event) => {
   const passwordValue = password.value;
 
   if (emailValue.length === 0 || passwordValue.length === 0) {
-    alert("все поля должны быть заполнены");
+    return alert("все поля должны быть заполнены");
   }
-
   console.table({ emailValue, passwordValue });
-
   refs.form.reset();
 };
 refs.form.addEventListener("submit", hendleSubmit);
