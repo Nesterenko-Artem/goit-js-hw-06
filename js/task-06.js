@@ -30,14 +30,14 @@ input.addEventListener("blur", checkValue);
 function checkValue(event) {
   console.log(event.currentTarget.value.length);
   if (
-    event.currentTarget.value.length >
+    event.currentTarget.value.length ===
     Number(event.currentTarget.dataset.length)
   ) {
-    input.classList.remove("valid");
-    input.classList.add("invalid");
-  } else {
     input.classList.remove("invalid");
     input.classList.add("valid");
+  } else {
+    input.classList.remove("valid");
+    input.classList.add("invalid");
   }
 }
 
