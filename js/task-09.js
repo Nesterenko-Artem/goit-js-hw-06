@@ -22,14 +22,18 @@ const body = document.querySelector("body");
 const spanText = document.querySelector(".color");
 
 const changeColor = () => {
-  body.style.backgroundColor = getRandomHexColor();
-  spanText.textContent = getRandomHexColor();
-  spanText.style.color = getRandomHexColor();
-
+  const ischangeColor = getRandomHexColor();
+  body.style.backgroundColor = ischangeColor;
+  spanText.textContent = ischangeColor;
+  // =================================
+  // нет в ТЗ(сделано дополнительно для эксперемента)
+  spanText.style.color = ischangeColor;
+  spanText.style.backgroundColor = getRandomHexColor();
   link.style.color = getRandomHexColor();
 
   btnChangeColr.style.backgroundColor = getRandomHexColor();
   btnChangeColr.style.borderColor = getRandomHexColor();
   // btnChangeColr.textContent = `color: ${getRandomHexColor()}`;
+  // ================================
 };
 btnChangeColr.addEventListener("click", changeColor);
